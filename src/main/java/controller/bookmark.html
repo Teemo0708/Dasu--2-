@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>DaSu | Daily Supplements</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Boto Photo Studio HTML Template">
+	<meta name="keywords" content="photo, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="./css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="./css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="./css/slicknav.min.css"/>
+	<link rel="stylesheet" href="./css/modalogin.css"/>
+	<link rel="stylesheet" href="./css/bookmark.css"/>
+	<link rel="stylesheet" href="./css/같이먹으면x.css"/>
+
+	<!-- 클릭 팝업 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/test.css">
+	
+	<!-- 모달 h3  -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Dodum&family=Jua&family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+
+	<!-- 영양제 부분 bootsnipp -->
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- 코드펜 tooltip 하트 아이콘  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="./css/tooltipheart.css">
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="./css/style.css"/>
+
+	<!-- bootstrap  -->
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+	<!-- font -->
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
+	
+
+
+
+</head>
+<body>
+	<!-- Modal -->
+	<div class="container">
+	</div>
+	  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+		  <div class="modal-content">
+			<div class="modal-header border-bottom-0">
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">×</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+			  <div class="form-title text-center">
+				<h4>Login</h4>
+			  </div>
+			  <div class="d-flex flex-column text-center">
+				<form>
+				  <div class="form-group">
+					<input type="email" class="form-control" id="email1"placeholder="아이디를 입력하세요">
+				  </div>
+				  <div class="form-group">
+					<input type="password" class="form-control" id="password1" placeholder="비밀번호를 입력하세요">
+				  </div>
+				  <button type="button" class="btn btn-info btn-block btn-round" id="login_modal_btn">Login</button>
+				</form>
+				
+				<!-- <div class="text-center text-muted delimiter">or use a social network</div> -->
+			    <!-- <div class="d-flex justify-content-center social-buttons"> -->
+				<!-- <div class="sns_icon"> -->
+				  <!-- <button type="button" onclick="kakaoLogin();" class="btn btn-round" data-toggle="tooltip" data-placement="top" title="Kakao">
+					<i class="fab"><img src="img/노란카카오_원형.png"></i></a>
+				  </button>
+				  <button type="button" onclick="fnFbCustomLogin();" class="btn btn-round"  data-toggle="tooltip" data-placement="top" title="Facebook">
+					<i class="fab"><img src="img/블루페북_원형.png"></i>
+				  </button>
+				  <button type="button" class="btn btn-round" data-toggle="tooltip" data-placement="top" title="Naver">
+					<i class="fab"><img src="img/그린네이버_원형.png"></i>
+				  </button> -->
+			  <!-- </div> -->
+			<!-- </div> -->
+		</div>
+		   </div>
+			<div class="modal-footer d-flex justify-content-center">
+			  <div class="signup-section">Not a member yet? <a href="join.html" class="text-info"> Sign Up</a>.</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	  <!-- modal 끝 -->
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header Section -->
+	<header class="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4 col-md-3 order-2 order-sm-1">
+					<div class="header__social">
+
+						<a data-toggle="modal" href="#loginModal"><i class="login" >Login</i></a>
+						<a href="join.html"><i class="join" >Join</i></a>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-6 order-1  order-md-2 text-center">
+					<a href="./index.html" class="site-logo">
+						<img src="img/DaSulogo.png" alt="" width=230px; height=230px;>
+					</a>
+				</div>
+				<div class="col-sm-4 col-md-3 order-3 order-sm-3">
+					<div class="header__switches">
+						<a href="#" class="search-switch"><i class="fa fa-search"></i></a>
+						<a href="#" class="nav-switch"><i class="fa fa-bars"></i></a>
+						<a href="bookmark.html"><i class="fa fa-bookmark"></i></a>
+					</div>
+				</div>
+			</div>
+			<nav class="main__menu">
+				<ul class="nav__menu">
+					<li><a href="./index.html">홈</a></li>
+					<!-- <li><a href="./about.html">About</a></li> -->
+					<li><a href="./supplements.html">제품 보기</a>
+						<ul class="sub__menu">
+							<li><a href="vitaminA.html">비타민A</a></li>
+							<li><a href="vitaminB.html">비타민B</a></li>
+							<li><a href="vitaminC.html">비타민C</a></li>
+							<li><a href="vitaminD.html">비타민D</a></li>
+							<li><a href="omega3.html">오메가3</a></li>
+							<li><a href="magnesium.html">마그네슘</a></li>
+							<li><a href="propolis.html">프로폴리스</a></li>
+							<li><a href="probiotic.html">유산균</a></li>
+							<li><a href="lutein.html">루테인</a></li>
+							<li><a href="milkthistle.html">밀크씨슬</a></li>
+							<li><a href="iron.html">철분</a></li>
+							<li><a href="ayeon.html">아연</a></li>
+							<li><a href="multivitamin.html">종합비타민</a></li>
+							<li><a href="vitaminE.html">비타민E</a></li>
+						</ul></li>
+						<li><a href="./suggest.html">영양제 추천</a>
+						<li><a href="./hospital.html">가까운 병원 찾기</a>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Header Section end -->
+
+	<!-- 영양제 bootsnipp 부분 시작 -->
+
+	<section class="our-webcoderskull padding-lg">
+		<div class="container">
+			<div class="row heading heading-icon">
+				<h2 class="book">bookmark</h2>
+		  <ul class="row">
+			<li class="col-12 col-md-6 col-lg-3">
+				<div class="cnt-block equal-hight" style="height: 349px;">
+				  <figure><!-- tooltip 하트 시작 -->
+					<div class="wishlist-heart-group">
+						<input name="product-521" id="product-521" data-product-id="521" type="checkbox" />
+						<label for="product-521" data-hover-text="Wish List">
+							<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="30px" height="30px" viewBox="0 0 100 100">
+								<g transform="translate(0,-952.36218)">
+									<path style="color:#000000;enable-background:accumulate;" d="m 34.166665,972.36218 c -11.41955,0 -19.16666,8.91891 -19.16666,20.27029 0,19.45943 15,27.56753 35,39.72973 20.00001,-12.1622 34.99999,-20.2703 34.99999,-39.72973 0,-11.35137 -7.7471,-20.27029 -19.16665,-20.27029 -7.35014,0 -13.39148,4.05405 -15.83334,6.48647 -2.44185,-2.43241 -8.48319,-6.48647 -15.83334,-6.48647 z" fill="transparent" id="heart-path" stroke="#737373" stroke-width="5" marker="none" visibility="visible" display="inline" overflow="visible"/></g>
+							</svg>
+						</label>
+					</div>	
+					<!-- tooltip 하트 끝 --><img src="img/오메가3_프리미엄피쉬오일_180EPA-120DHA_생선_젤라틴_소프트젤240정.jpg" class="img-responsive" alt=""></figure>
+				  <h3 class="bm_title"><a href="#">오메가3 소프트젤 240정</a></h3>
+				</div>
+			</li>
+			<li class="col-12 col-md-6 col-lg-3">
+				<div class="cnt-block equal-hight" style="height: 349px;">
+				  <figure><!-- tooltip 하트 시작 -->
+					<div class="wishlist-heart-group">
+						<input name="product-522" id="product-522" data-product-id="522" type="checkbox" />
+						<label for="product-522" data-hover-text="Wish List">
+							<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="30px" height="30px" viewBox="0 0 100 100">
+								<g transform="translate(0,-952.36218)">
+									<path style="color:#000000;enable-background:accumulate;" d="m 34.166665,972.36218 c -11.41955,0 -19.16666,8.91891 -19.16666,20.27029 0,19.45943 15,27.56753 35,39.72973 20.00001,-12.1622 34.99999,-20.2703 34.99999,-39.72973 0,-11.35137 -7.7471,-20.27029 -19.16665,-20.27029 -7.35014,0 -13.39148,4.05405 -15.83334,6.48647 -2.44185,-2.43241 -8.48319,-6.48647 -15.83334,-6.48647 z" fill="transparent" id="heart-path" stroke="#737373" stroke-width="5" marker="none" visibility="visible" display="inline" overflow="visible"/></g>
+							</svg>
+						</label>
+					</div>	
+					<!-- tooltip 하트 끝 --><img src="img/오메가3_프리미엄피쉬오일_180EPA-120DHA_생선_젤라틴_소프트젤240정.jpg" class="img-responsive" alt=""></figure>
+				  <h3 class="bm_title"><a href="#">오메가3 소프트젤 240정</a></h3>
+				</div>
+			</li>
+			<li class="col-12 col-md-6 col-lg-3">
+				<div class="cnt-block equal-hight" style="height: 349px;">
+				  <figure><!-- tooltip 하트 시작 -->
+					<div class="wishlist-heart-group">
+						<input name="product-523" id="product-523" data-product-id="523" type="checkbox" />
+						<label for="product-523" data-hover-text="Wish List">
+							<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="30px" height="30px" viewBox="0 0 100 100">
+								<g transform="translate(0,-952.36218)">
+									<path style="color:#000000;enable-background:accumulate;" d="m 34.166665,972.36218 c -11.41955,0 -19.16666,8.91891 -19.16666,20.27029 0,19.45943 15,27.56753 35,39.72973 20.00001,-12.1622 34.99999,-20.2703 34.99999,-39.72973 0,-11.35137 -7.7471,-20.27029 -19.16665,-20.27029 -7.35014,0 -13.39148,4.05405 -15.83334,6.48647 -2.44185,-2.43241 -8.48319,-6.48647 -15.83334,-6.48647 z" fill="transparent" id="heart-path" stroke="#737373" stroke-width="5" marker="none" visibility="visible" display="inline" overflow="visible"/></g>
+							</svg>
+						</label>
+					</div>	
+					<!-- tooltip 하트 끝 --><img src="img/오메가3_프리미엄피쉬오일_180EPA-120DHA_생선_젤라틴_소프트젤240정.jpg" class="img-responsive" alt=""></figure>
+				  <h3 class="bm_title"><a href="#">오메가3 소프트젤 240정</a></h3>
+				</div>
+			 </li>
+			<li class="col-12 col-md-6 col-lg-3">
+				<div class="cnt-block equal-hight" style="height: 349px;">
+				  <figure><!-- tooltip 하트 시작 -->
+					<div class="wishlist-heart-group">
+						<input name="product-524" id="product-524" data-product-id="524" type="checkbox" />
+						<label for="product-524" data-hover-text="Wish List">
+							<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="30px" height="30px" viewBox="0 0 100 100">
+								<g transform="translate(0,-952.36218)">
+									<path style="color:#000000;enable-background:accumulate;" d="m 34.166665,972.36218 c -11.41955,0 -19.16666,8.91891 -19.16666,20.27029 0,19.45943 15,27.56753 35,39.72973 20.00001,-12.1622 34.99999,-20.2703 34.99999,-39.72973 0,-11.35137 -7.7471,-20.27029 -19.16665,-20.27029 -7.35014,0 -13.39148,4.05405 -15.83334,6.48647 -2.44185,-2.43241 -8.48319,-6.48647 -15.83334,-6.48647 z" fill="transparent" id="heart-path" stroke="#737373" stroke-width="5" marker="none" visibility="visible" display="inline" overflow="visible"/></g>
+							</svg>
+						</label>
+					</div>	
+					<!-- tooltip 하트 끝 --><img src="img/오메가3_프리미엄피쉬오일_180EPA-120DHA_생선_젤라틴_소프트젤240정.jpg" class="img-responsive" alt=""></figure>
+				  <h3 class="bm_title"><a href="#">오메가3 소프트젤 240정</a></h3>
+				</div>
+			</li>
+		  </ul>
+
+		  <ul class="row">
+			<li class="col-12 col-md-6 col-lg-3">
+				<div class="cnt-block equal-hight" style="height: 349px;">
+				  <figure><!-- tooltip 하트 시작 -->
+					<div class="wishlist-heart-group">
+						<input name="product-525" id="product-525" data-product-id="525" type="checkbox" />
+						<label for="product-525" data-hover-text="Wish List">
+							<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="30px" height="30px" viewBox="0 0 100 100">
+								<g transform="translate(0,-952.36218)">
+									<path style="color:#000000;enable-background:accumulate;" d="m 34.166665,972.36218 c -11.41955,0 -19.16666,8.91891 -19.16666,20.27029 0,19.45943 15,27.56753 35,39.72973 20.00001,-12.1622 34.99999,-20.2703 34.99999,-39.72973 0,-11.35137 -7.7471,-20.27029 -19.16665,-20.27029 -7.35014,0 -13.39148,4.05405 -15.83334,6.48647 -2.44185,-2.43241 -8.48319,-6.48647 -15.83334,-6.48647 z" fill="transparent" id="heart-path" stroke="#737373" stroke-width="5" marker="none" visibility="visible" display="inline" overflow="visible"/></g>
+							</svg>
+						</label>
+					</div>	
+					<!-- tooltip 하트 끝 --><img src="img/오메가3_프리미엄피쉬오일_180EPA-120DHA_생선_젤라틴_소프트젤240정.jpg" class="img-responsive" alt=""></figure>
+				  <h3 class="bm_title"><a href="#">오메가3 소프트젤 240정</a></h3>
+				</div>
+			</li>
+			<li class="col-12 col-md-6 col-lg-3">
+				<div class="cnt-block equal-hight" style="height: 349px;">
+				  <figure><!-- tooltip 하트 시작 -->
+					<div class="wishlist-heart-group">
+						<input name="product-526" id="product-526" data-product-id="526" type="checkbox" />
+						<label for="product-526" data-hover-text="Wish List">
+							<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="30px" height="30px" viewBox="0 0 100 100">
+								<g transform="translate(0,-952.36218)">
+									<path style="color:#000000;enable-background:accumulate;" d="m 34.166665,972.36218 c -11.41955,0 -19.16666,8.91891 -19.16666,20.27029 0,19.45943 15,27.56753 35,39.72973 20.00001,-12.1622 34.99999,-20.2703 34.99999,-39.72973 0,-11.35137 -7.7471,-20.27029 -19.16665,-20.27029 -7.35014,0 -13.39148,4.05405 -15.83334,6.48647 -2.44185,-2.43241 -8.48319,-6.48647 -15.83334,-6.48647 z" fill="transparent" id="heart-path" stroke="#737373" stroke-width="5" marker="none" visibility="visible" display="inline" overflow="visible"/></g>
+							</svg>
+						</label>
+					</div>	
+					<!-- tooltip 하트 끝 --><img src="img/오메가3_프리미엄피쉬오일_180EPA-120DHA_생선_젤라틴_소프트젤240정.jpg" class="img-responsive" alt=""></figure>
+				  <h3 class="bm_title"><a href="#">오메가3 소프트젤 240정</a></h3>
+				</div>
+			</li>
+			<li class="col-12 col-md-6 col-lg-3">
+				<div class="cnt-block equal-hight" style="height: 349px;">
+				  <figure><!-- tooltip 하트 시작 -->
+					<div class="wishlist-heart-group">
+						<input name="product-527" id="product-527" data-product-id="527" type="checkbox" />
+						<label for="product-527" data-hover-text="Wish List">
+							<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="30px" height="30px" viewBox="0 0 100 100">
+								<g transform="translate(0,-952.36218)">
+									<path style="color:#000000;enable-background:accumulate;" d="m 34.166665,972.36218 c -11.41955,0 -19.16666,8.91891 -19.16666,20.27029 0,19.45943 15,27.56753 35,39.72973 20.00001,-12.1622 34.99999,-20.2703 34.99999,-39.72973 0,-11.35137 -7.7471,-20.27029 -19.16665,-20.27029 -7.35014,0 -13.39148,4.05405 -15.83334,6.48647 -2.44185,-2.43241 -8.48319,-6.48647 -15.83334,-6.48647 z" fill="transparent" id="heart-path" stroke="#737373" stroke-width="5" marker="none" visibility="visible" display="inline" overflow="visible"/></g>
+							</svg>
+						</label>
+					</div>	
+					<!-- tooltip 하트 끝 --><img src="img/오메가3_프리미엄피쉬오일_180EPA-120DHA_생선_젤라틴_소프트젤240정.jpg" class="img-responsive" alt=""></figure>
+				  <h3 class="bm_title"><a href="#">오메가3 소프트젤 240정</a></h3>
+				</div>
+			 </li>
+			<li class="col-12 col-md-6 col-lg-3">
+				<div class="cnt-block equal-hight" style="height: 349px;">
+				  <figure><!-- tooltip 하트 시작 -->
+					<div class="wishlist-heart-group">
+						<input name="product-528" id="product-528" data-product-id="528" type="checkbox" />
+						<label for="product-528" data-hover-text="Wish List">
+							<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="30px" height="30px" viewBox="0 0 100 100">
+								<g transform="translate(0,-952.36218)">
+									<path style="color:#000000;enable-background:accumulate;" d="m 34.166665,972.36218 c -11.41955,0 -19.16666,8.91891 -19.16666,20.27029 0,19.45943 15,27.56753 35,39.72973 20.00001,-12.1622 34.99999,-20.2703 34.99999,-39.72973 0,-11.35137 -7.7471,-20.27029 -19.16665,-20.27029 -7.35014,0 -13.39148,4.05405 -15.83334,6.48647 -2.44185,-2.43241 -8.48319,-6.48647 -15.83334,-6.48647 z" fill="transparent" id="heart-path" stroke="#737373" stroke-width="5" marker="none" visibility="visible" display="inline" overflow="visible"/></g>
+							</svg>
+						</label>
+					</div>	
+					<!-- tooltip 하트 끝 --><img src="img/오메가3_프리미엄피쉬오일_180EPA-120DHA_생선_젤라틴_소프트젤240정.jpg" class="img-responsive" alt=""></figure>
+				  <h3 class="bm_title"><a href="#">오메가3 소프트젤 240정</a></h3>
+				</div>
+			</li>
+		</ul>
+		</div>
+		<!-- 영양제 bootsnipp 부분 끝 -->
+
+		 <!-- 부트스트랩 페이징 -->
+	<nav aria-label="Page navigation example">
+		<ul class="pagination justify-content-center">
+			  <li class="page-item">
+				<a class="page-link" href="#" aria-label="Previous">
+				  <span aria-hidden="true" id="sp_page">&laquo;</span>
+				</a>
+			  </li>
+			  <li class="page-item"><a class="page-link" id="sp_page" href="#">1</a></li>
+			  <li class="page-item"><a class="page-link" id="sp_page" href="#">2</a></li>
+			  <li class="page-item"><a class="page-link" id="sp_page" href="#">3</a></li>
+			  <li class="page-item"><a class="page-link" id="sp_page" href="#">4</a></li>
+			  <li class="page-item"><a class="page-link" id="sp_page" href="#">5</a></li>
+			  <li class="page-item">
+				<a class="page-link" href="#" aria-label="Next">
+				  <span aria-hidden="true" id="sp_page">&raquo;</span>
+				</a>
+			  </li>
+			</ul>
+		  </nav>
+		<!-- 부트스트랩 페이징 끝 -->
+	
+	<!-- Bootstrap Footer 시작 -->
+<footer class="text-center text-lg-start bg-light text-muted">
+	<!-- 플로팅 아이콘 시작 -->
+	
+
+	<div class="floBanMob2 hidden-lg">
+		<button id="openMyPopup" data-popup="myPopup" onClick="openPopup('#myPopup')" aria-controls="myPopup" aria-label="Open popup"><img src="/img/같이 먹으면 안돼요!.png" width="100px" height="100px"></button>
+
+		<div class="popup" id="myPopup" aria-hidden="true" onClick="if(event.target == this){closePopup('#myPopup');}">
+			<div class="wrapper" aria-labelledby="popupTitle" aria-describedby="popupText" aria-modal="true">
+				<h3 id="popupTitle">같이 먹으면 안좋은 영양제는?</h3>
+				<p id="popupText"> 칼슘 + 비타민D<br>
+					 비타민B1 + 타닌<br>
+					 종합비타민 + 철분<br>
+					 비타민A + 루테인<br>
+					 칼슘 + 철분<br>
+					 마그네슘 + 칼슘 
+
+	
+				</p>
+
+				<button id="closePopup" onClick="closePopup('#myPopup');" aria-label="Close popup">Close</button>
+			</div>
+		</div>
+	  <!-- </a> -->
+	</div><br>
+	<!-- 플로팅 아이콘 끝 -->
+
+	<!-- Section: Social media -->
+	<section
+	  class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+	>
+	  <!-- Left -->
+	  <div class="me-5 d-none d-lg-block">
+		<span>Get connected with us on social networks:</span>
+	  </div>
+	  <!-- Left -->
+  
+	  <!-- Right -->
+	  <div>
+		<a href="" class="me-4 text-reset">
+		  <i class="fab fa-facebook-f"></i>
+		</a>
+		<a href="" class="me-4 text-reset">
+		  <i class="fab fa-twitter"></i>
+		</a>
+		<a href="" class="me-4 text-reset">
+		  <i class="fab fa-google"></i>
+		</a>
+		<a href="" class="me-4 text-reset">
+		  <i class="fab fa-instagram"></i>
+		</a>
+		<a href="" class="me-4 text-reset">
+		  <i class="fab fa-linkedin"></i>
+		</a>
+		<a href="" class="me-4 text-reset">
+		  <i class="fab fa-github"></i>
+		</a>
+	  </div>
+	  <!-- Right -->
+	</section>
+	<!-- Section: Social media -->
+  
+	<!-- Section: Links  -->
+	<section class="">
+	  <div class="container text-center text-md-start mt-5">
+		<!-- Grid row -->
+		<div class="row mt-3">
+		  <!-- Grid column -->
+		  <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+			<!-- Content -->
+			<h6 class="text-uppercase fw-bold mb-4">
+			  <i class="fas fa-gem me-3"></i> Team. 에너자이조
+			</h6>
+			<p>
+			  강미리 김준호 박광희 양명호 최낙현 천수빈
+			</p>
+		  </div>
+		  <!-- Grid column -->
+  
+		  <!-- Grid column -->
+		  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+			<!-- Links -->
+			<h6 class="text-uppercase fw-bold mb-4">
+			  Products
+			</h6>
+			<p>
+			  <a href="#!" class="text-reset">Angular</a>
+			</p>
+			<p>
+			  <a href="#!" class="text-reset">React</a>
+			</p>
+			<p>
+			  <a href="#!" class="text-reset">Vue</a>
+			</p>
+			<p>
+			  <a href="#!" class="text-reset">Laravel</a>
+			</p>
+		  </div>
+		  <!-- Grid column -->
+  
+		  <!-- Grid column -->
+		  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+			<!-- Links -->
+			<h6 class="text-uppercase fw-bold mb-4">
+			  Useful links
+			</h6>
+			<p>
+			  <a href="#!" class="text-reset">Pricing</a>
+			</p>
+			<p>
+			  <a href="#!" class="text-reset">Settings</a>
+			</p>
+			<p>
+			  <a href="#!" class="text-reset">Orders</a>
+			</p>
+			<p>
+			  <a href="#!" class="text-reset">Help</a>
+			</p>
+		  </div>
+		  <!-- Grid column -->
+  
+		  <!-- Grid column -->
+		  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+			<!-- Links -->
+			<h6 class="text-uppercase fw-bold mb-4">
+			  Contact
+			</h6>
+			<p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+			<p>
+			  <i class="fas fa-envelope me-3"></i>
+			  info@example.com
+			</p>
+			<p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+			<p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+		  </div>
+		  <!-- Grid column -->
+		</div>
+		<!-- Grid row -->
+	  </div>
+	</section>
+	<!-- Section: Links  -->
+  
+	<!-- Footer Copyright -->
+	<!-- <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+	  © 2021 Copyright:
+	  <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+	</div> -->
+  </footer>
+  <!-- Footer 끝 -->
+
+	<!-- Footer Section -->
+	
+			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+			<!-- <div class="footer__copyright__text">
+				<p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+			</div> -->
+			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+		
+	<!-- Footer Section end -->
+
+	<!-- Search Begin -->
+	<div class="search-model">
+		<div class="h-100 d-flex align-items-center justify-content-center">
+			<div class="search-close-switch">+</div>
+			<form class="search-model-form">
+				<input type="text" id="search-input" placeholder="Search here.....">
+			</form>
+		</div>
+	</div>
+	<!-- Search End -->
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/modal.js"></script>
+
+	<!-- Popper JS -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+	<!-- Bootstrap JS -->
+	<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+
+	<!-- 클릭 팝업  -->
+	<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+	<script  src="js/test.js"></script>
+
+	</body>
+</html>

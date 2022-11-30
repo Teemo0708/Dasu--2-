@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 어떤 증상이 있나요? </title>
+    <meta name="description" content="어떤 증상이 있나요?">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="부족한 영양소 알아보기">
+    <meta property="og:description" content="나는 무슨 영양소가 필요할까?">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container">
+    <article class="start">
+        <h1 class="main-title mt-5 text-center">부족한 영양소 알아보기</h1>
+        <h2 class="sub-title mt-3 text-center"><strong>나는 무슨 영양소가 필요할까?</strong></h2>
+        <img class="updown-slash mt-5" src="img/vitamins_PNG39.png" alt="up-slash">
+        <div class="start-cover mt-3 mb-3">
+            <button type="button" class="btn-start btn btn-primary" onclick='start();'>시작하기</button>
+        </div>
+    </article>
+    <article class="question">
+        <div class="progress mt-5">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
+        </div>
+        <h2 id="title" class="question-content text-center mt-4 mb-4">문제</h2>
+        <input id="type" type="hidden" value="EI">
+        <div class="rectangle mt-5"></div>
+        <button id="A" type="button" class="btn-answer btn btn-primary pt-4 pb-4">대답A</button>
+        <button id="B" type="button" class="btn-answer btn btn-primary pt-4 pb-4">대답B</button>
+        <div class="rectangle"></div>
+
+        <article class="result">
+            <span class="result-message mt-4 mb-4"><strong>당신은...</strong></span>
+            <img id="img" class="rounded-circle mt-5" src="img/testlogo.png" alt="supplements">
+            <h2 id="supplements" class="result-supplements text-center mt-4 mb-4">영양소 이름</h2>
+            <h3 id="explain" class="result-explain text-center mt-4">설명</h3>
+            <div class="rectangle mt-4 mb-4"></div>
+            <span class="share-message mb-4">친구들에게 <strong>공유하기</strong></span>
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="share addthis_inline_share_toolbox"></div>
+            <div class="start-cover mt-3 mb-3">
+                <button type="button" class="btn-start btn btn-primary" onclick="location.href='https://www.namoham.com'">돌아가기</button>
+            </div>
+        </article>
+        <article class="logo">
+            <img class="mt-5 eventeffect_logo" src="img/eventeffect_logo2.png" alt="eventevent-logo">
+            <span class="mt-2 text-center copyright-text">Copyright 2021 EVENT EFFECT all rights reserved</span>
+        </article>
+       
+        </article>
+    
+        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+        <input type="hidden" id="철분" value="0">
+        <input type="hidden" id="요오드" value="0">
+        <input type="hidden" id="비타민A" value="0">
+        <input type="hidden" id="비타민D" value="0">
+        <input type="hidden" id="마그네슘" value="0">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"></script>
+        <script>
+    var List = function(){
+        this.dataStore = [];
+        this.pos = 0;
+        this.listSize = 0;
+    }
+    
+    // 
+
+                                        // 1 종합영양제
+                                        // Comprehensive nutritional supplements
+                                        // 2 루테인
+                                        // 3 종합비타민
+                                        // 4 비타민A
+                                        // 5 비타민B
+                                        // 6 비타민C
+                                        // 7 비타민D
+                                        // 8 오메가3
+                                        // 9 요오드
+                                        // 10 철분
+                                        // 11 마그네슘
+                                        // 12 아연
+                                        // 13 프로폴리스
+                                        // 14 유산균
+            var num = 1;
+            var q = {
+                1: { "title": "피로감이 있나요?", "type": "철분", "A": "있어요", "B": "없어요" },
+                2: { "title": "허약해진 기분이 드나요?", "type": "철분", "A": "허약해진 것 같아요", "B": "아니요" },
+                3: { "title": "잔병치레가 많아졌나요?", "type": "철분", "A": "면역력이 떨어진 것 같아요", "B": "아니요" },
+                4: { "title": "호흡이 힘든 경우가 생기나요?", "type": "요오드", "A": "가끔 있습니다", "B": "아니요" },
+                5: { "title": "갑작스러운 체중증가 증상이 있나요?", "type": "요오드", "A": "식사량에 비해 체중이 많이 증가했습니다", "B": "아니요" },
+                6: { "title": "심박수에 이상이 있나요?", "type": "요오드", "A": "네 있습니다", "B": "딱히 느낀적은 없습니다" },
+                7: { "title": "안구가 건조하거나 충혈이 일어나나요?", "type": "비타민A", "A": "네 그렇습니다", "B": "아니요" },
+                8: { "title": "피부에 각질이 자주 일어나나요?", "type": "비타민A", "A": "네 각질이 일어납니다", "B": "아니요" },
+                9: { "title": "골밀도에 이상이 있다는 진단을 받으셨나요?", "type": "비타민D", "A": "네 그렇습니다", "B": "아니요" },
+                10: { "title": "근육경련이나 다리가 떨리는 증상을 겪은적이 있나요?", "type": "비타민D", "A": "네 가끔(혹은 자주) 떨립니다", "B": "아니요" },
+                11: { "title": "편두통이 자주 생기나요?", "type": "마그네슘", "A": "네 그렇습니다", "B": "아니요" },
+                12: { "title": "입 주변이 갈라지나요?", "type": "마그네슘", "A": "네 그렇습니다", "B": "아니요" }
+            }
+
+            var supplements = "";
+
+            var list1 = [];
+
+        
+        function start() {
+            $(".start").hide();
+            $(".question").show();
+            next();
+        }
+
+        $("#A").click(function () {
+            var type = $("#type").val();
+            var preValue = $("#" + type).val();
+            $("#" + type).val(parseInt(preValue) + 1);
+            next();
+
+        });
+        $("#B").click(function () {
+            next();
+        });
+        function next() {
+            if (num == 13) {
+                $(".question").hide();
+                $(".result").show();
+                var supplements = "";
+                if($("#비타민A").val() != 0){
+                    list1.push("4");
+                };
+
+                if($("#비타민D").val() != 0){
+                    list1.push("7");
+                };
+                
+                if($("#요오드").val() != 0){
+                    list1.push("9");
+                };
+
+                if($("#철분").val() != 0){
+                    list1.push("10");
+                };
+
+                if($("#마그네슘").val() != 0){
+                    list1.push("11");
+                };
+                
+
+
+                for(var i = 0 ; i< list1.length; i++) {
+
+                document.write(list1[i]);
+            };
+                
+            } else {
+                $(".progress-bar").attr('style', 'width: calc(100/12*' + num + '%)');
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
+        }
+        </script>
+    
+</body>
+</html>

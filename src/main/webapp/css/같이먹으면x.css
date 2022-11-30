@@ -1,0 +1,31 @@
+
+	/* PC 후원하기 버튼 스타일 */
+	.floBanPc1 {
+	  position: fixed;
+	  top: 128px; /* 윗쪽 끝에서부터의 거리 */
+	  right: 50%;
+	  margin-right: -683px; /* 가운데를 기준으로 오른쪽 거리 */
+	  z-index: 99;
+	}
+	/* PC 문의하기 버튼 스타일 */
+	.floBanPc2 {
+	  position: fixed;
+	  top: 204px; /* 윗쪽 끝에서부터의 거리 */
+	  right: 50%;
+	  margin-right: -683px; /* 가운데를 기준으로 오른쪽 거리 */
+	  z-index: 99;
+	}
+	/* Mobile 후원하기 버튼 스타일 */
+	.floBanMob1 {
+	  position: fixed;
+	  bottom: 130px; /* 아래 끝에서부터의 거리 */
+	  right: 15px; /* 오른쪽 끝에서부터의 거리 */
+	  z-index: 99;
+	}
+	/* Mobile 문의하기 버튼 스타일 */
+	.floBanMob2 {
+	  position: fixed;
+	  bottom: 80px; /* 아래 끝에서부터의 거리 */
+	  right: 15px; /* 오른쪽 끝에서부터의 거리 */
+	  z-index: 99;
+	}
